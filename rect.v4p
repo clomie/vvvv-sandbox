@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="D:\vvvv_45beta34.2_x86\patches\rect.v4p" scrollx="0" scrolly="-360" systemname="rect" filename="D:\vvvv_45beta34.2_x86\patches\rect.v4p" locked="0">
+   <PATCH nodename="C:\Users\cloako\Documents\vvvv-sandbox\rect.v4p" scrollx="0" scrolly="-360" systemname="rect" filename="D:\vvvv_45beta34.2_x86\patches\rect.v4p" locked="0">
    <BOUNDS type="Window" left="870" top="1740" width="9000" height="8820">
    </BOUNDS>
    <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="2">
@@ -33,7 +33,7 @@
    </PIN>
    </NODE>
    <NODE id="0" componentmode="InAWindow" systemname="Renderer (EX9)" nodename="Renderer (EX9)">
-   <BOUNDS type="Window" left="3960" top="9930" width="5040" height="3255">
+   <BOUNDS type="Window" left="12720" top="10260" width="5040" height="3255">
    </BOUNDS>
    <BOUNDS type="Node" left="2820" top="7020" width="100" height="100">
    </BOUNDS>
@@ -152,36 +152,6 @@
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="RLSpread" filename="%VVVV%\patches\RLSpread.v4p" nodename="%VVVV%\patches\RLSpread.v4p" componentmode="Hidden" id="161">
-   <BOUNDS type="Node" left="4050" top="2790" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Minimum" slicecount="1" visible="1" values="-0.15">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" visible="1" values="0.45">
-   </PIN>
-   <PIN pinname="Spread Count" slicecount="1" values="15">
-   </PIN>
-   <PIN pinname="Randomize" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="162">
-   <BOUNDS type="Node" left="3870" top="3345" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Saturation" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Hue" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Alpha" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="161" srcpinname="Output" dstnodeid="162" dstpinname="Hue">
-   </LINK>
    <NODE id="124" componentmode="Hidden" systemname="Randomize (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\Randomize (Spreads).v4p" nodename="Randomize (Spreads)">
    <PIN pinname="Random Seed" slicecount="1" visible="1" values="0">
    </PIN>
@@ -203,8 +173,6 @@
    <LINK srcnodeid="124" srcpinname="Output" dstnodeid="84" dstpinname="TranslateY">
    </LINK>
    <LINK srcnodeid="30" srcpinname="Cycles" dstnodeid="124" dstpinname="Random Seed">
-   </LINK>
-   <LINK srcnodeid="30" srcpinname="Change" dstnodeid="161" dstpinname="Randomize">
    </LINK>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="213">
    <BOUNDS type="Node" left="3450" top="5025" width="100" height="100">
@@ -287,15 +255,23 @@
    </PIN>
    <PIN pinname="Bang" visible="1">
    </PIN>
-   <PIN pinname="Color" visible="1">
+   <PIN pinname="Color" visible="1" slicecount="15" values="|0.00000,1.00000,0.34000,1.00000|,|1.00000,0.66000,0.00000,1.00000|,|0.38000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.58000,1.00000|,|1.00000,0.00000,0.54000,1.00000|,|1.00000,0.18000,0.00000,1.00000|,|1.00000,0.00000,0.30000,1.00000|,|1.00000,0.00000,0.06000,1.00000|,|1.00000,0.00000,0.78000,1.00000|,|0.14000,1.00000,0.00000,1.00000|,|0.86000,1.00000,0.00000,1.00000|,|0.62000,1.00000,0.00000,1.00000|,|1.00000,0.90000,0.00000,1.00000|,|1.00000,0.42000,0.00000,1.00000|,|0.00000,1.00000,0.10000,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="30" srcpinname="Output" dstnodeid="144" dstpinname="Phase">
    </LINK>
    <LINK srcnodeid="144" srcpinname="Layer" dstnodeid="141" dstpinname="Layer 1">
    </LINK>
-   <LINK srcnodeid="162" srcpinname="Output" dstnodeid="144" dstpinname="Color">
-   </LINK>
    <LINK srcnodeid="84" srcpinname="Transform Out" dstnodeid="144" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="220" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="4710" top="2670" width="2250" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4710" top="2670" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="7" visible="1" values="|1.00000,0.00000,0.30018,1.00000|,|1.00000,0.00000,0.00304,1.00000|,|0.99630,0.30525,0.00000,1.00000|,|1.00000,0.60666,0.00000,1.00000|,|0.50549,1.00000,0.00000,1.00000|,|0.18030,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.11990,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="220" srcpinname="Color Output" dstnodeid="144" dstpinname="Color">
    </LINK>
    </PATCH>

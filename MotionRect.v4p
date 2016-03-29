@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="D:\vvvv_45beta34.2_x86\patches\MotionRect.v4p" scrollx="0" scrolly="-360" systemname="MotionRect" filename="D:\vvvv_45beta34.2_x86\patches\MotionRect.v4p">
+   <PATCH nodename="C:\Users\cloako\Documents\vvvv-sandbox\MotionRect.v4p" scrollx="0" scrolly="-360" systemname="MotionRect" filename="D:\vvvv_45beta34.2_x86\patches\MotionRect.v4p">
    <NODE id="1" systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Layer" visible="1" pintype="Output">
    </PIN>
@@ -178,7 +178,7 @@
    </NODE>
    <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="12" dstpinname="Input Node">
    </LINK>
-   <BOUNDS type="Window" left="13260" top="4425" width="9270" height="7530">
+   <BOUNDS type="Window" left="10125" top="2685" width="9270" height="7530">
    </BOUNDS>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="15">
    <BOUNDS type="Node" left="1890" top="735" width="100" height="100">
