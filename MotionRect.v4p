@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\cloako\Documents\vvvv-sandbox\MotionRect.v4p" scrollx="0" scrolly="-360" systemname="MotionRect" filename="D:\vvvv_45beta34.2_x86\patches\MotionRect.v4p">
+   <PATCH nodename="D:\vvvv_45beta34.2_x86\patches\MotionRect.v4p" scrollx="0" scrolly="-360" systemname="MotionRect" filename="D:\vvvv_45beta34.2_x86\patches\MotionRect.v4p">
    <NODE id="1" systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Layer" visible="1" pintype="Output">
    </PIN>
@@ -25,7 +25,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1890" top="345" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" pintype="Input" values="0.1">
+   <PIN pinname="Y Input Value" slicecount="19" visible="1" pintype="Input" values="0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1" pintype="Output">
    </PIN>
@@ -323,6 +323,8 @@
    </PIN>
    <PIN pinname="Value" visible="1">
    </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="83">
    <BOUNDS type="Node" left="5235" top="1440" width="100" height="100">
@@ -344,6 +346,8 @@
    <PIN pinname="Value" visible="1" slicecount="1" values="0.704569726390387">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="80" srcpinname="Hue" dstnodeid="84" dstpinname="Hue" linkstyle="PolyLine">
@@ -393,7 +397,7 @@
    <LINK srcnodeid="16" srcpinname="Input Value" dstnodeid="88" dstpinname="Min">
    </LINK>
    <NODE systemname="Gamma (Range)" filename="%VVVV%\patches\Gamma (Range).v4p" nodename="Gamma (Range)" componentmode="Hidden" id="89">
-   <BOUNDS type="Node" left="5865" top="2775" width="100" height="100">
+   <BOUNDS type="Node" left="5865" top="2775" width="1095" height="270">
    </BOUNDS>
    <PIN pinname="Phase" visible="1">
    </PIN>
@@ -477,5 +481,7 @@
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="101" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="101" srcpinname="Output" dstnodeid="99" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Alpha" dstnodeid="84" dstpinname="Alpha">
    </LINK>
    </PATCH>
