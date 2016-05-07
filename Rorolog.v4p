@@ -959,9 +959,9 @@
    </PIN>
    <PIN pinname="Geometry" visible="1">
    </PIN>
-   <PIN pinname="Range To" slicecount="1" values="5">
+   <PIN pinname="Range To" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Density" slicecount="1" values="0.35">
+   <PIN pinname="Density" slicecount="1" values="0.4">
    </PIN>
    </NODE>
    <LINK srcnodeid="358" srcpinname="Layer" dstnodeid="82" dstpinname="Layer 1">
