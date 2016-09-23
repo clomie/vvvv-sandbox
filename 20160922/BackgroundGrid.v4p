@@ -1,0 +1,179 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Users\cloako\Documents\vvvv-sandbox\20160922\BackgroundGrid.v4p" systemname="BackgroundGrid" filename="C:\Users\cloako\Documents\vvvv-sandbox\20160922\BackgroundGrid.v4p">
+   <NODE systemname="Line (DX11)" filename="%VVVV%\packs\dx11\nodes\modules\Line (DX11).v4p" nodename="Line (DX11)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2220" top="4680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Single Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="VerticesXYZ" visible="1" slicecount="108" values="-4.44444444444444,-4.44444444444444,0,-4.44444444444444,4.44444444444444,0,-4.44444444444444,-4.44444444444444,0,4.44444444444444,-4.44444444444444,0,-3.33333333333333,-4.44444444444444,0,-3.33333333333333,4.44444444444444,0,-4.44444444444444,-3.33333333333333,0,4.44444444444444,-3.33333333333333,0,-2.22222222222222,-4.44444444444444,0,-2.22222222222222,4.44444444444444,0,-4.44444444444444,-2.22222222222222,0,4.44444444444444,-2.22222222222222,0,-1.11111111111111,-4.44444444444444,0,-1.11111111111111,4.44444444444444,0,-4.44444444444444,-1.11111111111111,0,4.44444444444444,-1.11111111111111,0,0,-4.44444444444444,0,0,4.44444444444444,0,-4.44444444444444,0,0,4.44444444444444,0,0,1.11111111111111,-4.44444444444444,0,1.11111111111111,4.44444444444444,0,-4.44444444444444,1.11111111111111,0,4.44444444444444,1.11111111111111,0,2.22222222222222,-4.44444444444444,0,2.22222222222222,4.44444444444444,0,-4.44444444444444,2.22222222222222,0,4.44444444444444,2.22222222222222,0,3.33333333333333,-4.44444444444444,0,3.33333333333333,4.44444444444444,0,-4.44444444444444,3.33333333333333,0,4.44444444444444,3.33333333333333,0,4.44444444444444,-4.44444444444444,0,4.44444444444444,4.44444444444444,0,-4.44444444444444,4.44444444444444,0,4.44444444444444,4.44444444444444,0">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1.35">
+   </PIN>
+   <PIN pinname="Antialias" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|0.50412,0.50412,0.50412,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1500" top="1500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" slicecount="1" values="150">
+   </PIN>
+   <PIN pinname="Alignment" slicecount="1" values="Centered">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="200">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2640" top="3165" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1500" top="3075" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Zip (3d)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (3d)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2850" top="3945" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1XY" visible="1" slicecount="20" values="0.05,0,0.15,0,0.25,0,0.35,0,0.45,0,0.55,0,0.65,0,0.75,0,0.85,0,0.95,0">
+   </PIN>
+   <PIN pinname="Input 2XY" visible="1" slicecount="20" values="0.05,1,0.15,1,0.25,1,0.35,1,0.45,1,0.55,1,0.65,1,0.75,1,0.85,1,0.95,1">
+   </PIN>
+   <PIN pinname="OutputXY" visible="1">
+   </PIN>
+   <PIN pinname="Input 1XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Input 2XYZ" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2850" top="3945">
+   </BOUNDS>
+   <PIN pinname="OutputXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input 3XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Input 4XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="CAR (Spreads)" nodename="CAR (Spreads)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="1755" top="2625" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="First Slice" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="CDR (Spreads)" nodename="CDR (Spreads)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="2490" top="2565" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Last Slice" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="3645" top="3165" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="4425" top="3150" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Y" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="X" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="1740" top="3990" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" visible="1" values="20">
+   </PIN>
+   <PIN pinname="TranslateZ" slicecount="1" values="20">
+   </PIN>
+   <PIN pinname="Roll" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="CenterZ" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="3" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="First Slice" dstnodeid="3" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="5" dstpinname="Input" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="OutputXYZ" dstnodeid="0" dstpinname="VerticesXYZ">
+   </LINK>
+   <NODE id="10" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="2220" top="5280" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2220" top="5280" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="10" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="2" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Last Slice" dstnodeid="2" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="XYZ" dstnodeid="4" dstpinname="Input 1XYZ">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="XYZ" dstnodeid="4" dstpinname="Input 2XYZ">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="XYZ" dstnodeid="4" dstpinname="Input 3XYZ">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="XYZ" dstnodeid="4" dstpinname="Input 4XYZ">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="First Slice" dstnodeid="7" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="7" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Last Slice" dstnodeid="8" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="8" dstpinname="Y">
+   </LINK>
+   <BOUNDS type="Window" left="7665" top="4470" width="7815" height="7740">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   </PATCH>
