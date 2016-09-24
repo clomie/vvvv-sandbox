@@ -11,7 +11,7 @@
    </PIN>
    <PIN pinname="Width" slicecount="1" values="1.35">
    </PIN>
-   <PIN pinname="Antialias" slicecount="1" values="1">
+   <PIN pinname="Antialias" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>

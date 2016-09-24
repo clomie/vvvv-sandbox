@@ -1,0 +1,189 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Users\cloako\Documents\vvvv-sandbox\20160922\CameraSettings.v4p" systemname="CameraSettings" filename="C:\Users\cloako\Documents\vvvv-sandbox\20160922\CameraSettings.v4p" scrollx="30" scrolly="-1800">
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="4230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1" slicecount="200" values="-0.248061651891189,-0.480253891927832,-0.708050445846229,-0.92690501697833,-1.13227130865608,-1.31961390507119,-1.4856150592282,-1.62927049954742,-1.74983471977087,-1.84656221364051,-1.91870747489835,-1.96552499728637,-1.98626927454656,-1.9801948004209,-1.9465560686514,-1.88460757298003,-1.79360380714879,-1.67279926489967,-1.52181469927284,-1.34337483380918,-1.14176775100617,-0.921293448870606,-0.686251925409322,-0.440943178629137,-0.189667206536869,0.0632759928606528,0.313586421556621,0.556964081544208,0.789108974816594,1.00572110336696,1.20251670796074,1.37702929812442,1.53024505176052,1.66353633235059,1.77827550337612,1.87583492831866,1.95758697065971,2.02490399388081,2.07915836146346,2.1217224368892,2.15396858363955,2.17726916519602,2.19299654504014,2.20231556444147,2.20463235758037,2.19846726076023,2.18233385896678,2.15474573718575,2.11421648040287,2.05925967360388,1.98838890177451,1.90011774990049,1.79295980296756,1.66542864596144,1.51603786386788,1.34332086126774,1.14802903869117,0.935127815330018,0.710053954003585,0.478244217531156,0.245135368732023,0.0161641704254756,-0.203232614569196,-0.407618223432702,-0.591555893345753,-0.749608861489057,-0.876340365043324,-0.966313641189265,-1.0147792407443,-1.02281255300405,-0.994422730134429,-0.93364128466768,-0.844499729136032,-0.731029576071722,-0.597262338006982,-0.447229527474051,-0.284962657005155,-0.114493239132534,0.0601472136115809,0.234927188694954,0.405820179196719,0.569359852390446,0.723144162664344,0.864890106344861,0.992314679758444,1.10313487923154,1.19506770109059,1.26583014166205,1.31313919727236,1.33471186424796,1.32826513891532,1.29151601760086,1.22218149663104,1.11847431955972,0.982808583400844,0.819714456683841,0.633738236076767,0.429426218247674,0.211324699864615,-0.0160200224043582,0.353947437007013,0.200625079528471,0.0545948650962276,-0.0802147872766935,-0.199875458577269,-0.300471775321226,-0.379548279311523,-0.437423237103364,-0.474725160077899,-0.492082559616276,-0.490123947099646,-0.469477833909156,-0.430772731425958,-0.374637151031199,-0.30169960410603,-0.212588602031599,-0.107932656189056,0.0116397220404501,0.145321037660348,0.29078694718686,0.444949124789184,0.604713421764697,0.766985689410778,0.928671779024806,1.08667754190416,1.23790882934621,1.37927149264835,1.50767138310795,1.62001435202239,1.71320625068905,1.78416940703156,1.8316700357949,1.85797759233092,1.86575337414214,1.85765867873108,1.83635480360025,1.80450304625217,1.76476470418936,1.71980107491433,1.6722734559296,1.6248431447377,1.58017143884114,1.54091963574243,1.50947285204092,1.48587562928272,1.46899364504858,1.4576835919292,1.45080216251531,1.4472060493976,1.44575194516681,1.44529654241363,1.44469653372878,1.44280861170299,1.43848946892695,1.43059579799138,1.41798940956845,1.40010487496636,1.37746496586162,1.35071417059843,1.32049697752098,1.28745787497348,1.2522413513001,1.21549189484504,1.1778539939525,1.13997213696666,1.10249081223172,1.06605450809187,1.03130771289131,0.998891029519291,0.969412132451898,0.943462111300883,0.921631929272537,0.904512549573153,0.892694935409019,0.886770049986429,0.887328856511673,0.894962318191042,0.910261398230828,0.933817059837322,0.966220266216814,1.00805181720691,1.05875513771843,1.11561272934378,1.17566539151,1.23595392364411,1.29351912517315,1.34540179552415,1.38864273412415,1.42028274040017,1.43736261377926,1.43692315368843,1.41600515955473,1.37164943080519,1.30139674755922,1.20702512112124,1.09244670463839,0.961589917123703,0.818383177590199,0.6667549050509,0.51063351851883">
+   </PIN>
+   <PIN pinname="Z" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1" slicecount="1" values="-0.109999999403954">
+   </PIN>
+   <PIN pinname="Y" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Cartesian (2d)" nodename="Cartesian (2d)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1740" top="2895" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1" slicecount="2" values="1,0">
+   </PIN>
+   <PIN pinname="Angle" visible="1" slicecount="1" values="0.375">
+   </PIN>
+   <PIN pinname="Length" visible="1" slicecount="1" values="0.01">
+   </PIN>
+   <PIN pinname="X" slicecount="1" visible="1" values="-0.02">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Polar (2d)" nodename="Polar (2d)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="2640" top="3960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Angle" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2400" top="4740" width="300" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="X" dstnodeid="0" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Y" dstnodeid="0" dstpinname="Y">
+   </LINK>
+   <NODE id="5" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Interest">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="5420" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="5420" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="XYZ" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   <NODE id="7" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Roll">
+   </PIN>
+   <BOUNDS type="Box" left="2400" top="5420" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2400" top="5420" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0.34394143401346">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="X" dstnodeid="3" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Y" dstnodeid="3" dstpinname="Y">
+   </LINK>
+   <BOUNDS type="Window" left="12060" top="2295" width="5310" height="7080">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <LINK srcnodeid="3" srcpinname="Angle" dstnodeid="4" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="7" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3540" top="405" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3540" top="405" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Phase">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="1740" top="2310" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1" slicecount="1" values="0.125">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Position Out" dstnodeid="1" dstpinname="Angle">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="16">
+   <BOUNDS type="Node" left="1200" top="405" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1200" top="405" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Initial">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="1740" top="1320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="2205" top="960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="17" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="19" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2205" top="405" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2205" top="405" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.625">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Addition">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="17" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="15" dstpinname="Go To Position">
+   </LINK>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="3240" top="1260" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="OnChange" dstnodeid="15" dstpinname="Reset">
+   </LINK>
+   </PATCH>
