@@ -1,0 +1,103 @@
+//@author: tekcor
+//@help: Fog from Depth Buffer
+//@tags: texture, fog, depthbuffer
+//@credits: ploobs.com
+
+cbuffer cbPerDraw : register( b0 )
+{
+float dz;
+float4x4 InvertViewProjection;
+float3 cameraPosition;
+float far;
+float near;
+float4 fcolor <bool color=true;> = {0.5, 0.5, 0.5, 1} ;
+};
+Texture2D texture2d : PREVIOUS;
+Texture2D DepthTexture <string uiname="Depth";>;
+
+SamplerState linearSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+
+
+
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+
+float4 PixelShaderExponencial(psInput input) : SV_Target
+{
+	
+	float depthVal = DepthTexture.Sample(linearSampler,input.uv).r;
+	float4 cen = texture2d.Sample(linearSampler, input.uv);
+	
+    //compute screen-space position
+    float4 position;
+	position.x = input.uv.x * 2.0f - 1.0f;
+	position.y = -(input.uv.x * 2.0f - 1.0f);
+	position.z = depthVal;
+	position.w = 1.0f;
+	
+	//transform to world space
+	position = mul(position, InvertViewProjection);
+	position /= position.w;
+	
+	float d = length(position.xyz - cameraPosition);
+	float l = exp(-d * dz);
+	l = saturate(1 - l);
+	
+	return float4(lerp(cen,fcolor, l));
+
+}
+
+float4 PixelShaderExponencialSquared(psInput input) : SV_Target
+{
+	
+	float depthVal = DepthTexture.Sample(linearSampler,input.uv).r;
+	float4 cen = texture2d.Sample(linearSampler,input.uv);
+	
+    //compute screen-space position
+    float4 position;
+	position.x = input.uv.x * 2.0f - 1.0f;
+	position.y = -(input.uv.x * 2.0f - 1.0f);
+	position.z = depthVal;
+	position.w = 1.0f;
+	
+	//transform to world space
+	position = mul(position, InvertViewProjection);
+	position /= position.w;
+	
+	float d = length(position.xyz - cameraPosition);
+	float l = exp( - pow( d * dz , 2 ) );
+	l = saturate(1 - l);
+	
+	return float4(lerp(cen,fcolor, l));
+}
+
+
+
+technique10 FogExponencialShader
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,PixelShaderExponencial()));
+	}
+}
+
+technique10 FogExponencialSquaredShader
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,PixelShaderExponencialSquared()));
+	}
+}
+
+
