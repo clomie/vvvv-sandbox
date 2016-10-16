@@ -977,7 +977,7 @@
    </PIN>
    <PIN pinname="Path" slicecount="1" values="..\frames">
    </PIN>
-   <PIN pinname="Write" visible="1">
+   <PIN pinname="Write" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Frame Sample Count" slicecount="1" values="1">
    </PIN>
@@ -991,57 +991,5 @@
    <LINK srcnodeid="91" srcpinname="Actual BackBuffer SizeXY" dstnodeid="166" dstpinname="Texture SizeXY">
    </LINK>
    <LINK srcnodeid="91" srcpinname="Texture Out" dstnodeid="166" dstpinname="Texture">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="167" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7470" top="13200" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7470" top="13200" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="166" dstpinname="Write">
-   </LINK>
-   <NODE systemname="FlipFlop (Animation)" nodename="FlipFlop (Animation)" componentmode="Hidden" id="168">
-   <BOUNDS type="Node" left="7470" top="12735" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <PIN pinname="Set" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="168" srcpinname="Output" dstnodeid="167" dstpinname="Y Input Value">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="169" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8535" top="11925" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="8535" top="11925" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="169" srcpinname="Y Output Value" dstnodeid="168" dstpinname="Reset">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="168" dstpinname="Set">
    </LINK>
    </PATCH>
