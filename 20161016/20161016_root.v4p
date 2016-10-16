@@ -95,7 +95,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="From" slicecount="1" visible="1" values="0.25">
+   <PIN pinname="From" slicecount="1" visible="1" values="0.35">
    </PIN>
    <PIN pinname="To" visible="1">
    </PIN>
@@ -164,8 +164,6 @@
    </NODE>
    <LINK srcnodeid="43" srcpinname="Output" dstnodeid="48" dstpinname="Value Input">
    </LINK>
-   <LINK srcnodeid="42" srcpinname="To" dstnodeid="43" dstpinname="From">
-   </LINK>
    <NODE systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" id="50">
    <BOUNDS type="Node" left="6735" top="10950" width="100" height="100">
    </BOUNDS>
@@ -199,7 +197,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="From" slicecount="1" visible="1" values="0.25">
+   <PIN pinname="From" slicecount="1" visible="1" values="0.6">
    </PIN>
    <PIN pinname="To" visible="1">
    </PIN>
@@ -208,8 +206,6 @@
    <BOUNDS type="Box" left="5910" top="4530">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="43" srcpinname="To" dstnodeid="51" dstpinname="From">
-   </LINK>
    <LINK srcnodeid="47" srcpinname="Output" dstnodeid="51" dstpinname="Input" linkstyle="VHV">
    <LINKPOINT x="3675" y="4335">
    </LINKPOINT>
@@ -489,7 +485,7 @@
    <LINK srcnodeid="76" srcpinname="XYZ" dstnodeid="57" dstpinname="Translate XYZ">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="77" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7740" top="2775" width="795" height="240">
+   <BOUNDS type="Box" left="7740" top="2775" width="645" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="7740" top="2775" width="0" height="0">
    </BOUNDS>
@@ -723,6 +719,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Random Seed" slicecount="1" values="558">
+   </PIN>
    </NODE>
    <LINK srcnodeid="132" srcpinname="Output" dstnodeid="134" dstpinname="Input">
    </LINK>
@@ -773,7 +771,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="From" slicecount="1" visible="1" values="0.25">
+   <PIN pinname="From" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="To" visible="1">
    </PIN>
@@ -783,8 +781,6 @@
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="77" srcpinname="Y Output Value" dstnodeid="138" dstpinname="Duration" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="To" dstnodeid="138" dstpinname="From">
    </LINK>
    <LINK srcnodeid="138" srcpinname="To" dstnodeid="46" dstpinname="Y Input Value">
    </LINK>
@@ -971,5 +967,81 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Reset">
+   </LINK>
+   <NODE systemname="Writer (DX11.Texture 2d NRT Advanced)" filename="%VVVV%\packs\dx11\nodes\modules\WriterDX11NRT\Writer (DX11.Texture 2d NRT Advanced).v4p" nodename="Writer (DX11.Texture 2d NRT Advanced)" componentmode="Hidden" id="166">
+   <BOUNDS type="Node" left="6510" top="14160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Path" slicecount="1" values="..\frames">
+   </PIN>
+   <PIN pinname="Write" visible="1">
+   </PIN>
+   <PIN pinname="Frame Sample Count" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Target Framerate" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Maximum forground fps" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Maximum background fpsS" slicecount="1" values="25">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="Actual BackBuffer SizeXY" dstnodeid="166" dstpinname="Texture SizeXY">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Texture Out" dstnodeid="166" dstpinname="Texture">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="167" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7470" top="13200" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7470" top="13200" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="166" dstpinname="Write">
+   </LINK>
+   <NODE systemname="FlipFlop (Animation)" nodename="FlipFlop (Animation)" componentmode="Hidden" id="168">
+   <BOUNDS type="Node" left="7470" top="12735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="168" srcpinname="Output" dstnodeid="167" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="169" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8535" top="11925" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8535" top="11925" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="169" srcpinname="Y Output Value" dstnodeid="168" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="168" dstpinname="Set">
    </LINK>
    </PATCH>
