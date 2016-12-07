@@ -1,11 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\cloako\Documents\vvvv-sandbox\20161208\20161208.v4p" systemname="20161208" filename="C:\Users\cloako\Documents\vvvv-sandbox\20161208\20161208.v4p">
-   <BOUNDS type="Window" left="2820" top="3870" width="8670" height="9135">
+   <PATCH nodename="C:\Users\cloako\Documents\vvvv-sandbox\20161208_WordpadGlitchJPG\20161208.v4p" systemname="20161208" filename="C:\Users\cloako\Documents\vvvv-sandbox\20161208\20161208.v4p">
+   <BOUNDS type="Window" left="2820" top="3870" width="8670" height="5025">
    </BOUNDS>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="0">
-   <BOUNDS type="Node" left="2955" top="3795" width="100" height="100">
+   <BOUNDS type="Node" left="1920" top="3315" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2955" top="3795" width="2400" height="1800">
+   <BOUNDS type="Box" left="1920" top="3315" width="2400" height="1800">
    </BOUNDS>
    <BOUNDS type="Window" left="15630" top="6000" width="6240" height="6585">
    </BOUNDS>
@@ -13,7 +13,7 @@
    </PIN>
    </NODE>
    <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="2955" top="3330" width="100" height="100">
+   <BOUNDS type="Node" left="1920" top="2850" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -23,7 +23,7 @@
    </PIN>
    <PIN pinname="Enable Depth" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Box" left="2955" top="3330">
+   <BOUNDS type="Box" left="1920" top="2850">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="0" dstpinname="Layers">
@@ -31,7 +31,7 @@
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="WordpadGlitchJPG" filename="WordpadGlitchJPG.v4p" nodename="WordpadGlitchJPG.v4p" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="2955" top="2580" width="100" height="100">
+   <BOUNDS type="Node" left="1920" top="2100" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
@@ -45,7 +45,7 @@
    </PIN>
    <PIN pinname="Enable" slicecount="1" values="1">
    </PIN>
-   <BOUNDS type="Box" left="2955" top="2580">
+   <BOUNDS type="Box" left="1920" top="2100">
    </BOUNDS>
    <PIN pinname="DQT Glitch" visible="1">
    </PIN>
@@ -55,7 +55,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Assets (EX9.Texture Source)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Source\Assets\Assets (EX9.Texture Source).v4p" nodename="Assets (EX9.Texture Source)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="1995" top="1335" width="100" height="100">
+   <BOUNDS type="Node" left="960" top="855" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -63,21 +63,21 @@
    </PIN>
    <PIN pinname="Repair" slicecount="1" values="1">
    </PIN>
-   <BOUNDS type="Box" left="1995" top="1335">
+   <BOUNDS type="Box" left="960" top="855">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="4" dstpinname="Texture" linkstyle="VHV">
-   <LINKPOINT x="2055" y="2085">
+   <LINKPOINT x="1020" y="1605">
    </LINKPOINT>
-   <LINKPOINT x="2955" y="2085">
+   <LINKPOINT x="1920" y="1605">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="1" dstpinname="Texture">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3330" top="1170" width="795" height="240">
+   <BOUNDS type="Box" left="2295" top="690" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3330" top="1170" width="0" height="0">
+   <BOUNDS type="Node" left="2295" top="690" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4">
    </PIN>
@@ -93,9 +93,9 @@
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="4" dstpinname="DQT Glitch">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3690" top="1680" width="795" height="240">
+   <BOUNDS type="Box" left="2655" top="1200" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3690" top="1680" width="0" height="0">
+   <BOUNDS type="Node" left="2655" top="1200" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -111,9 +111,9 @@
    <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="4" dstpinname="DHT Glitch">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4065" top="2190" width="795" height="240">
+   <BOUNDS type="Box" left="3030" top="1710" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4065" top="2190" width="0" height="0">
+   <BOUNDS type="Node" left="3030" top="1710" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4">
    </PIN>
