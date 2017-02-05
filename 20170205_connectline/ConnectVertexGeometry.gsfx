@@ -1,0 +1,68 @@
+StructuredBuffer<float3> vertexBuffer;
+StructuredBuffer<uint2> indexBuffer;
+
+struct VS_IN
+{
+	uint iv : SV_VertexID;
+};
+
+struct GS_IN
+{
+	float3 srcPos : POSITION0;
+	float3 dstPos : POSITION1;
+};
+
+struct GS_OUT
+{
+	float3 pos : POSITION;
+};
+
+uint bSize(StructuredBuffer<uint2> buffer)
+{
+	uint count, dummy;
+	buffer.GetDimensions(count,dummy);
+	return count;
+}
+
+uint bSize(StructuredBuffer<float3> buffer)
+{
+	uint count, dummy;
+	buffer.GetDimensions(count,dummy);
+	return count;
+}
+
+GS_IN VS(VS_IN input)
+{
+	uint2 index = indexBuffer[input.iv % bSize(indexBuffer)];
+	float3 pos0 = vertexBuffer[index.x % bSize(vertexBuffer)];
+	float3 pos1 = vertexBuffer[index.y % bSize(vertexBuffer)];
+
+	GS_IN output;
+	output.srcPos = pos0;
+	output.dstPos = pos1;
+	return output;
+}
+
+[maxvertexcount(2)]
+void GS(point GS_IN points[1], inout LineStream<GS_OUT> output)
+{
+	GS_OUT o[2];
+	o[0].pos = points[0].srcPos;
+	o[1].pos = points[0].dstPos;
+
+	output.Append(o[0]);
+	output.Append(o[1]);
+	output.RestartStrip();
+}
+
+GeometryShader StreamOutGS =
+	ConstructGSWithSO(CompileShader(gs_5_0, GS()), "POSITION.xyz;");
+
+technique10 Connect
+{
+	pass PP2
+	{
+		SetVertexShader( CompileShader( vs_5_0, VS() ) );
+		SetGeometryShader(StreamOutGS);
+	}
+}
